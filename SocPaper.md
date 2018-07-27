@@ -1,11 +1,4 @@
-# 社会学の論文メモ
+Paper Summaries
 
-## *American Sociological Review*
-
-## *American Journal of Sociology*
-
-## *Social Forces*
-
-## *Sociological Methodology*
-
-## *Sociological Methods & Research*
+- 論文の一言まとめ，また概要をIssueで管理しています．
+- まとめかたについては手探り中です．
