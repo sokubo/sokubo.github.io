@@ -1,11 +1,11 @@
-# 社会学論文のメモ
+# 社会学の論文メモ
 
-## American Sociological Review
+## *American Sociological Review*
 
-## American Journal of Sociology
+## *American Journal of Sociology*
 
-## Social Forces
+## *Social Forces*
 
-## Sociological Methodology
+## *Sociological Methodology*
 
-## SOciological Methods & Research
+## *Sociological Methods & Research*
