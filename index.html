@@ -1,34 +1,98 @@
----
-layout: default
-title: Home
-slug: home
----
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<div class="span-8">
-<!--   <img src="images/blackwell-2012.png"  alt="Me with Mac"/>  -->
-</div>
-<div class="span-8 last">
-<div class="front-header">
-<h3>About Me</h3>
-</div>
-<p>
-Hello. I am an Assistant Professor of <a href="http://www.rochester.edu/college/psc/">Political Science</a> at the <a href="http://www.rochester.edu/">University of Rochester</a>.
-</p>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>Matthew Blackwell - {{page.title}}</title>
+<script src="/css_browser_selector.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="/css/syntax-default.css" type="text/css" />
+  <!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+  <![endif]-->
+  <link rel="stylesheet" href="/css/matt.css" type="text/css"/> 
+  <link rel="icon" type="image/png" href="/images/favicon.png"/>
+<script type="text/javascript">
 
-<p> My research focuses on American politics and political
-methodology. In American politics, I study campaigns, the
-effectiveness of negative advertising, and Congressional staff
-networks. In methods, I work on dynamic causal inference, missing
-data, panel data, and social network analysis.
-</p>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24936268-1']);
+  _gaq.push(['_trackPageview']);
 
-<p>
-My <a onclick="pageTracker._trackPageview('/blackwell-cv.pdf');" href="http://www.mattblackwell.org/blackwell-cv.pdf">C.V.</a>
-</p>
-<!-- </div> -->
-<!-- <div class="span-4 last"> -->
-<!-- <div class="front-header"> -->
-<!-- <h3>My <a onclick="pageTracker._trackPageview('/blackwell-cv.pdf');" href="http://www.mattblackwell.org/blackwell-cv.pdf">C.V.</a></h3> -->
-<!--  <a href="http://www.mattblackwell.org/blackwell-cv.pdf"  onclick="pageTracker._trackPageview('/blackwell-cv.pdf');"><img src="/images/cv.jpg" /></a> -->
-<!-- </div> -->
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+ 
+</head>
+
+<body>
+<div class="container">
+  <div class="span-16 last prepend-4 append-4">
+    <div id="title">
+      <a href="/" id="picture">Matt Blackwell</a>
+    </div>
+      <div id="navbar">
+        <ul>
+          <li{% if page.slug == "home" %} id="active"{% endif %}>
+            <a href="/"{% if page.slug == "home" %} id="current"{% endif%}>About</a></li><li{% if page.slug == "research" %} id="active"{% endif %}><a href="/research/"{% if page.slug == "research" %} id="current"{% endif%}>Research</a></li><li{% if page.slug == "teaching" %} id="active"{% endif %}><a href="/teaching/"{% if page.slug == "teaching" %} id="current"{% endif%}>Teaching</a></li><li{% if page.slug == "software" %} id="active"{% endif %}><a href="/software/"{% if page.slug == "software" %} id="current"{% endif%}>Software</a></li><li{% if page.slug == "resources" %} id="active"{% endif %}><a href="/resources/"{% if page.slug == "resources" %} id="current"{% endif%}>Resources</a></li><li{% if <p></p>age.slug == "blog" %} id="active"{% endif %}><a href="/blog/"{% if page.slug == "blog" %} id="current"{% endif%}>Blog</a></li>
+      </ul>
+      </div>
+  </div>
+  
+<div class="span-16 last prepend-4 append-4">
+  <div id="content">
+    {{content}}
+  </div>
 </div>
+
+<div class="span-16 last prepend-4 append-4">
+<div id="footer">
+  <div id="sites">  
+<div>
+      email: <a class="email" href="mailto:m.blackwell@rochester.edu">m.blackwell@rochester.edu</a>
+</div>
+<div>
+      url: <a class="url" href="http://www.mattblackwell.org"> http://www.mattblackwell.org
+</a>
+</div>
+<div>
+dataverse: <a class="url" href="http://dvn.iq.harvard.edu/dvn/dv/mattblackwell">mattblackwell</a>
+</div>
+<div>
+github: <a class="url" href="https://github.com/mattblackwell">mattblackwell</a>
+</div>
+<div>
+twitter: <a href="http://www.twitter.com/matt_blackwell/">@matt_blackwell</a>
+</div>
+<div>
+C.V. (<a href="http://www.mattblackwell.org/blackwell-cv.pdf" onclick="pageTracker._trackPageview('/blackwell-cv.pdf');">pdf</a>)
+</div>
+  </div>
+  <div class="vcard">
+    <div class="fn">Matthew Blackwell</div>
+    <div class="org">
+      <div class="organization-unit">Department of Political Science</div>
+      <div class="organization-name">University of Rochester</div>
+    </div>
+    <div class="address">
+      <div class="street-address">307 Harkness Hall</div>
+      <span class="locality">Rochester</span>, 
+      <abbr class="region" title="New York">NY</abbr> 
+      <span class="postal-code">14627-0146</span>
+    </div>
+  </div>
+</div>
+</div>
+</div> <!-- closing "container"--> 
+
+<script type="text/javascript" src="/scripts/retina.js"></script>
+</body>
+</html>
