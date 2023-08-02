@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="twitter:site" content="@{{ site.twitter_username }}"></meta>
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}"></meta>
+  <meta name="twitter:title" content="{{ page.title }}"></meta>
+  <meta name="twitter:domain" content="{{ site.url }}"></meta>
+  {% if page.summary %}
+  <meta name="twitter:description" content="{{ page.summary }}"></meta>
+  {% else %}
+  <meta name="twitter:description" content="{{ site.description }}"></meta>
+  {% endif %}
+  <meta name="twitter:card"  content="summary"></meta>
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}"></meta>
+  {% else %}
+  <meta name="twitter:image" content="{{ site.url }}{{ site.image }}"></meta>
+  {% endif %}
+
   <title>Matthew Blackwell - {{page.title}}</title>
-<script src="/css_browser_selector.js" type="text/javascript"></script>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="/css/syntax-default.css" type="text/css" />
-  <!--[if lt IE 8]>
-    <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-  <![endif]-->
-  <link rel="stylesheet" href="/css/matt.css" type="text/css"/> 
+  <script src="/css_browser_selector.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700,800,900" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" />
+  <!-- Kube CSS -->
+  <link rel="stylesheet" href="/css/kube.min.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/matt.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css"/>
   <link rel="icon" type="image/png" href="/images/favicon.png"/>
-<script type="text/javascript">
+  <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-24936268-1']);
@@ -28,39 +42,46 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
- 
+  </script>
 </head>
 
-<body>
-<div class="container">
-  <div class="span-16 last prepend-4 append-4">
-    <div id="title">
-      <a href="/" id="picture">Matt Blackwell</a>
-    </div>
-      <div id="navbar">
+  <body>
+  <div class="is-navbar-container is-inset-x-4 is-inset-bottom-8">
+    <div id="my-navbar" class="is-navbar">
+      <div class="is-brand">
+        <b><a href="/">Matt Blackwell</a></b>
+
+        <a href="#" class="nav-toggle" data-kube="toggle"
+                data-target="#navbar-demo"><span class="icon-kube-menu is-push-right-mobile is-shown-mobile"></span></a>
+        </div>
+      <nav id="navbar-demo" class="is-push-right is-hidden-mobile">
         <ul>
-          <li{% if page.slug == "home" %} id="active"{% endif %}>
-            <a href="/"{% if page.slug == "home" %} id="current"{% endif%}>About</a></li><li{% if page.slug == "research" %} id="active"{% endif %}><a href="/research/"{% if page.slug == "research" %} id="current"{% endif%}>Research</a></li><li{% if page.slug == "teaching" %} id="active"{% endif %}><a href="/teaching/"{% if page.slug == "teaching" %} id="current"{% endif%}>Teaching</a></li><li{% if page.slug == "software" %} id="active"{% endif %}><a href="/software/"{% if page.slug == "software" %} id="current"{% endif%}>Software</a></li><li{% if page.slug == "resources" %} id="active"{% endif %}><a href="/resources/"{% if page.slug == "resources" %} id="current"{% endif%}>Resources</a></li><li{% if <p></p>age.slug == "blog" %} id="active"{% endif %}><a href="/blog/"{% if page.slug == "blog" %} id="current"{% endif%}>Blog</a></li>
-      </ul>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/deep-roots/">Book</a></li>
+          <li><a href="/teaching/">Teaching</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li><a href="/blog/">Blog</a></li>
+    </ul>
+    </nav>
       </div>
   </div>
-  
-<div class="span-16 last prepend-4 append-4">
-  <div id="content">
+  <div class="is-width-medium is-center is-inset-16">
     {{content}}
   </div>
-</div>
 
-<div class="span-16 last prepend-4 append-4">
+
+<div class="is-inset-16">
 <div id="footer">
   <div id="sites">  
 <div>
-      email: <a class="email" href="mailto:m.blackwell@rochester.edu">m.blackwell@rochester.edu</a>
+      email: <a class="email" href="mailto:mblackwell@gov.harvard.edu">mblackwell@gov.harvard.edu</a>
 </div>
 <div>
       url: <a class="url" href="http://www.mattblackwell.org"> http://www.mattblackwell.org
 </a>
+</div>
+<div><a href="http://scholar.google.com/citations?user=zblbaxYAAAAJ">google scholar profile</a>
 </div>
 <div>
 dataverse: <a class="url" href="http://dvn.iq.harvard.edu/dvn/dv/mattblackwell">mattblackwell</a>
@@ -72,26 +93,33 @@ github: <a class="url" href="https://github.com/mattblackwell">mattblackwell</a>
 twitter: <a href="http://www.twitter.com/matt_blackwell/">@matt_blackwell</a>
 </div>
 <div>
+mastodon: <a rel="me" href="https://mastodon.social/@matt_blackwell">matt_backwell@mastodon.social</a>
+</div>
+<div>
 C.V. (<a href="http://www.mattblackwell.org/blackwell-cv.pdf" onclick="pageTracker._trackPageview('/blackwell-cv.pdf');">pdf</a>)
 </div>
   </div>
   <div class="vcard">
     <div class="fn">Matthew Blackwell</div>
     <div class="org">
-      <div class="organization-unit">Department of Political Science</div>
-      <div class="organization-name">University of Rochester</div>
+      <div class="organization-unit">Department of Government</div>
+      <div class="organization-name">Harvard University</div>
     </div>
     <div class="address">
-      <div class="street-address">307 Harkness Hall</div>
-      <span class="locality">Rochester</span>, 
-      <abbr class="region" title="New York">NY</abbr> 
-      <span class="postal-code">14627-0146</span>
+      <div class="street-address">1737 Cambridge St K305</div>
+      <span class="locality">Cambridge</span>, 
+      <abbr class="region" title="Massachusetts">MA</abbr> 
+      <span class="postal-code">02138</span>
     </div>
   </div>
 </div>
 </div>
-</div> <!-- closing "container"--> 
 
-<script type="text/javascript" src="/scripts/retina.js"></script>
+  <script type="text/javascript" src="/scripts/retina.js"></script>
+  <!-- Kube JS (optional if you are using Kube CSS only) -->
+  <script src="/scripts/kube.min.js"></script> 
+  <script>
+    $K.init();
+  </script>
 </body>
 </html>
