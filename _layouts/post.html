@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="project">
+  <div class="project-title">
+    {{page.title}} 
+  </div>
+  <div class="project-date">
+    {{page.date | date_to_string}} 
+  </div>
+  
+  
+{% if page.image %}
+<div class="span-8">
+<img src="{{page.image}}" alt="{{page.image-alt}}" />
+</div>
+{% endif %}
+{{content}}
+</div>
+<div class="post-nav"> 
+{% if page.blog_previous %}
+<a rel="prev" class="previous" href="{{page.blog_previous.url}}">&larr; {{page.blog_previous.title}}</a>
+{% endif %}
+{% if page.blog_next %}
+<a rel="next" class="next" href="{{page.blog_next.url}}">{{page.blog_next.title}} &rarr;</a>
+{% endif %}
+</div>
+
