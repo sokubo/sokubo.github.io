@@ -1,0 +1,26 @@
+---
+layout: default
+slug: blog
+title: Blog
+pagination: 1
+---
+
+{% for post in site.categories.blog %}
+<div class="project">
+  <div class="project-title">
+    {% if post.link %} 
+    <a href="{{post.link}}">{{post.title}} (→)</a>
+    {% else %}
+    <a href="{{post.url}}">{{post.title}}</a>
+    {% endif %}
+  </div>
+
+{{post.date | date_to_string}}
+<br /> <br />
+{{post.excerpt}}
+
+<a href="{{post.url}}">Continue reading...</a>
+</div>
+<hr />
+{% endfor %}
+<h4><a href="/blog/archive/">&larr; Archives</a></h4>
