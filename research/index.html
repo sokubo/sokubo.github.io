@@ -11,7 +11,7 @@ title: Research
 <div class ="category-name">
 <h3>Working Papers</h3>
 </div>
-{% assign wpByYear = site.research | where: "tags", "Working Paper" | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% assign wpByYear = site._research | where: "tags", "Working Paper" | group_by_exp:"post", "post.date | date: '%Y'"  %}
 {% for year in wpByYear reversed%}
 <div class="is-row">
 <div class="is-col is-10 paperlist">
