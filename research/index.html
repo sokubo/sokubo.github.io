@@ -1,0 +1,112 @@
+---
+layout: default
+slug: research
+title: Research
+---
+
+
+<h3><a href="/blackwell-cv.pdf">Curriculum Vitae</a></h3>
+
+
+<div class ="category-name">
+<h3>Working Papers</h3>
+</div>
+{% assign wpByYear = site.research | where: "tags", "Working Paper" | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in wpByYear reversed%}
+<div class="is-row">
+<div class="is-col is-10 paperlist">
+  {{year.name}}
+</div>
+<div class="is-col is-90 paperlist">
+  <ul>
+    {% for paper in year.items reversed %}
+    <li> {{paper.author}}. "{{paper.title}}."
+      {% if paper.pdf %} 
+      <a href="{{paper.pdf}}" class="boxlink">pdf</a>
+      {% endif %}
+      {% if paper.software %} 
+      <a href="{{paper.software}}" class="boxlink">software</a>
+      {% endif %}
+      {% if paper.slides %} 
+      <a href="{{paper.slides}}" class="boxlink">slides</a>
+      {% endif %}
+      {% if paper.video %} 
+      <a href="{{paper.video}}" class="boxlink">video</a>
+      {% endif %}
+      <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-{{paper.slug}}">abstract</a>
+      <a href="{{paper.url}}" class="boxlink">more info</a>
+      <div id="abs-{{paper.slug}}" class="is-hidden is-inset-16">{{paper.excerpt}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
+</div>
+{% endfor %}
+
+<div class ="category-name">
+<h3>Books</h3>
+</div>
+{% assign bookByYear = site.research | where: "tags", "Book" | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in bookByYear reversed%}
+<div class="is-row">
+  <div class="is-col is-10 paperlist">
+    {{year.name}}
+  </div>
+  <div class="is-col is-90 paperlist">
+    <ul>
+      {% for paper in year.items %}
+      <li> {% if paper.url %} 
+    {{paper.author}}. {% if paper.site %} <em><a href="{{paper.site}}">{{paper.title}}.</a></em>{% else %} <em>{{paper.title}}.</em>{% endif %} {% if paper.publisher %} <b>{{paper.publisher}}</b> {% else %} Textbook manuscript {% endif %} <a href="{{paper.url}}" class="boxlink">more info</a>
+    {% else %}
+    {{paper.title}} 
+    {% endif %} 
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endfor %}
+
+
+
+<div class ="category-name">
+<h3>Publications</h3>
+</div>
+<div class="is-row">
+{% assign pubsByYear = site.research | where: "tags", "Published" | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in pubsByYear reversed %}
+<div class="is-col is-10">
+    {{year.name}}
+</div>
+<div class="is-col is-90 paperlist">
+  <ul>
+      {% for paper in year.items reversed %}
+      {% if paper.tags contains 'Published' %}
+      <li>  
+    {{paper.author}}. "{{paper.title}}." <b>{{paper.journal}}</b>{% if paper.volume %}, Vol. {{paper.volume}}{% endif %}{% if paper.number %}, No. {{paper.number}}{% endif %} ({{year.name}}){% if paper.pages %}: {{paper.pages}} {% endif %}
+    {% if paper.pdf %} <a href="{{paper.pdf}}" class="boxlink">pdf</a> {% endif %}         {% if paper.replication %}
+        <a href="{{paper.replication}}" class="boxlink">data</a>
+        {% endif %}
+        {% if paper.pubversion %}
+        <a href="{{paper.pubversion}}" class="boxlink">publisher version</a>
+        {% endif %}
+        {% if paper.software %} 
+        <a href="{{paper.software}}" class="boxlink">software</a>
+        {% endif %}
+        {% if paper.slides %} 
+        <a href="{{paper.slides}}" class="boxlink">slides</a>
+        {% endif %}
+        {% if paper.video %} 
+        <a href="{{paper.video}}" class="boxlink">video</a>
+        {% endif %}
+        <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-{{paper.slug}}">abstract</a>
+        <a href="{{paper.url}}" class="boxlink">more info</a>
+        <div id="abs-{{paper.slug}}" class="is-hidden is-inset-16">{{paper.excerpt}}</div>
+
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+</div>
