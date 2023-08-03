@@ -11,37 +11,100 @@ title: Research
 <div class ="category-name">
 <h3>Working Papers</h3>
 </div>
-{% assign wpByYear = site.research | where: "tags", "Working Paper" | group_by_exp:"post", "post.date | date: '%Y'"  %}
-{% for year in wpByYear reversed%}
 <div class="is-row">
 <div class="is-col is-10 paperlist">
-  {{year.name}}
+  2023
 </div>
 <div class="is-col is-90 paperlist">
   <ul>
-    {% for paper in year.items reversed %}
-    <li> {{paper.author}}. "{{paper.title}}."
-      {% if paper.pdf %} 
-      <a href="{{paper.pdf}}" class="boxlink">pdf</a>
-      {% endif %}
-      {% if paper.software %} 
-      <a href="{{paper.software}}" class="boxlink">software</a>
-      {% endif %}
-      {% if paper.slides %} 
-      <a href="{{paper.slides}}" class="boxlink">slides</a>
-      {% endif %}
-      {% if paper.video %} 
-      <a href="{{paper.video}}" class="boxlink">video</a>
-      {% endif %}
-      <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-{{paper.slug}}">abstract</a>
-      <a href="{{paper.url}}" class="boxlink">more info</a>
-      <div id="abs-{{paper.slug}}" class="is-hidden is-inset-16">{{paper.excerpt}}</div>
+    
+    <li> Shoki Okubo. "hogehoge."
+       
+      <a href="hoge.pdf" class="boxlink">pdf</a>
+      
+      
+      
+      
+     <!-- <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-batch_adaptive">abstract</a> -->
+     <!-- <a href="/research/batch_adaptive/" class="boxlink">more info</a> -->
+     <div id="abs-batch_adaptive" class="is-hidden is-inset-16">
+       <!-- 共著者 <p><em>(with <a href="https://sites.google.com/view/npashley/">Nicole Pashley</a> and Dominic Valentino)</em></p> -->
+
+<p>hogehoge.(Abstruct)</p>
+
+</div>
       </li>
-      {% endfor %}
+      
+    <li> Shoki Okubo. "hogehoge."
+       
+      <a href="hoge.pdf" class="boxlink">pdf</a>
+      
+      
+      
+      
+     <!-- <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-batch_adaptive">abstract</a> -->
+     <!-- <a href="/research/batch_adaptive/" class="boxlink">more info</a> -->
+     <div id="abs-batch_adaptive" class="is-hidden is-inset-16">
+       <!-- 共著者 <p><em>(with <a href="https://sites.google.com/view/npashley/">Nicole Pashley</a> and Dominic Valentino)</em></p> -->
+
+<p>hogehoge.(Abstruct)</p>
+
+</div>
+      </li>
+      
     </ul>
 </div>
 </div>
-{% endfor %}
+
+<div class="is-row">
+<div class="is-col is-10 paperlist">
+  2022
+</div>
+<div class="is-col is-90 paperlist">
+  <ul>
+    
+    <li> Shoki Okubo. "hogehoge."
+       
+      <a href="hoge.pdf" class="boxlink">pdf</a>
+      
+      
+      
+      
+     <!-- <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-batch_adaptive">abstract</a> -->
+     <!-- <a href="/research/batch_adaptive/" class="boxlink">more info</a> -->
+     <div id="abs-batch_adaptive" class="is-hidden is-inset-16">
+       <!-- 共著者 <p><em>(with <a href="https://sites.google.com/view/npashley/">Nicole Pashley</a> and Dominic Valentino)</em></p> -->
+
+<p>hogehoge.(Abstruct)</p>
+
+</div>
+      </li>
+      
+    <li> Shoki Okubo. "hogehoge."
+       
+      <a href="hoge.pdf" class="boxlink">pdf</a>
+      
+      
+      
+      
+     <!-- <a class="boxlink" href= "#" data-kube="toggle" data-target="#abs-batch_adaptive">abstract</a> -->
+     <!-- <a href="/research/batch_adaptive/" class="boxlink">more info</a> -->
+     <div id="abs-batch_adaptive" class="is-hidden is-inset-16">
+       <!-- 共著者 <p><em>(with <a href="https://sites.google.com/view/npashley/">Nicole Pashley</a> and Dominic Valentino)</em></p> -->
+
+<p>hogehoge.(Abstruct)</p>
+
+</div>
+      </li>
+      
+    </ul>
+</div>
+</div>
+
+
+<div class ="category-name">
+<h3>Books</h3>
+</div>
 
 <div class ="category-name">
 <h3>Books</h3>
