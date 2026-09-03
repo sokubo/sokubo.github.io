@@ -4,37 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Shoki Okubo</title>
-<meta name="description" content="Shoki Okubo — Assistant Professor of Sociology, Toyo University. Causal inference, model uncertainty, panel data.">
+<meta name="description" content="Shoki Okubo — Assistant Professor of Sociology, Toyo University. Causal inference, model uncertainty, survey measurement, and inequality over the life course in Japan.">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<script defer src="assets/katex/katex.min.js"></script>
+<script defer src="assets/katex/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false});"></script>
 </head>
 <body>
 <header class="site"><a class="name" href="index.html">Shoki Okubo</a><nav class="site"><a href="index.html" class=on>About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="software.html">Software</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a></nav></header>
 <main>
 
-<div class="hero">
-<div>
 <h1>Shoki Okubo</h1>
-<p class="lede">I am an Assistant Professor of Sociology at Toyo University, Tokyo. I work on causal inference under model uncertainty: which covariates a study should adjust for, how robustness should be reported honestly, and what data-driven variable selection does to statistical inference.</p>
-<p>My methodological work sits between sociological methodology and statistics. Current projects develop <em>causally disciplined multiverse analysis</em> — running robustness analyses only within specifications that a stated causal model licenses, and decomposing disagreement across specifications into sampling noise and structural uncertainty — together with valid post-selection inference for outcome-adaptive covariate selection and estimand-specific theory of optimal adjustment sets.</p>
-<p>Substantively I study care work, long-term care policy, and inequality over the life course, mostly with large-scale Japanese survey and panel data. I am a member of the Japanese Life Course Panel Surveys (JLPS) team at the Institute of Social Science, The University of Tokyo, where I was on the faculty from 2018 to 2025. I hold a PhD in Human Sciences from Osaka University (2017).</p>
-<p class="meta">Research interests: sociological methodology · statistical models for social data · computational social science · social policy · social stratification · institutional change.</p>
+<p class="lede">I am an Assistant Professor of Sociology at Toyo University, Tokyo. I work on causal inference under model uncertainty &mdash; which covariates a study should adjust for, how robustness should be reported honestly, and what data-driven variable selection does to statistical inference &mdash; and on what measurement itself does to the survey data we analyse.</p>
+<figure class="plate">
+<figcaption>Three identities from current work</figcaption>
+<div class="item">
+<div class="cap">Where a multiverse's disagreement comes from</div>
+<div class="eq">\[ \operatorname{Var}(\hat\tau)=\underbrace{\textstyle\sum_{g} w_g\,\operatorname{Var}(\hat\tau \mid G_g)}_{\text{within graphs: sampling + specification}}\;+\;\underbrace{\operatorname{Var}_g\,E[\hat\tau \mid G_g]}_{\text{between graphs: structural}} \]</div>
+<div class="note">Restrict a multiverse to the specifications each candidate causal graph licenses. The structural share \(\rho=\text{between}/\text{total}\) says how much of the spread is a disagreement about the world rather than about the model.</div>
 </div>
-<div><img src="assets/photo.jpg" alt="Photo" onerror="this.style.display='none'"><!-- TODO: copy your photo to assets/photo.jpg (≤300 KB, ~600px wide) --></div>
+<div class="item">
+<div class="cap">When an outcome predictor hurts the effect on the treated</div>
+<div class="eq">\[ V_{\mathrm{att}}(S\cup W)-V_{\mathrm{att}}(S)=\frac{1}{p^{2}}\,E\!\left[e_S\left\{\frac{1-2e_S}{1-e_S}\,V_0(S)-2\,C_{10}(S)\right\}\right] \]</div>
+<div class="note">For \(W \perp\!\!\!\perp A \mid S\). Unlike the average treatment effect, adding a predictor of the untreated outcome can <em>raise</em> the efficiency bound of the effect on the treated whenever treatment is rare and the two arms' predictions are uncorrelated &mdash; so the optimal adjustment set is not a property of the graph alone.</div>
 </div>
+<div class="item">
+<div class="cap">Panel conditioning from a cohort's own first wave</div>
+<div class="eq">\[ \begin{aligned} \tau^{S}_t(k) &= E[Y_t\mid S_{c:t}{=}1,\,A{=}1]\;-\;E[Y_t\mid A{=}0] \\ &\quad -\;\underbrace{\big\{E[Y_c\mid S_{c:t}{=}1,\,A{=}1]-E[Y_c\mid A{=}1]\big\}}_{\text{attrition selection, measured before any conditioning}} \end{aligned} \]</div>
+<div class="note">A continuing cohort's entry-wave answers are unconditioned for survivors and attriters alike, so they measure how selected the survivors are; a refreshment sample then supplies the untreated mean. The design needs no follow-up of the fresh cohort and survives non-stationary attrition.</div>
+</div>
+<p class="fine">Working papers; full statements, assumptions, and proofs are in the papers.</p>
+</figure>
+
+<p>My methodological work sits between sociological methodology and statistics. Current projects develop <em>causally disciplined multiverse analysis</em> &mdash; running robustness analyses only within specifications that a stated causal model licenses, and decomposing disagreement across specifications into sampling noise and structural uncertainty &mdash; together with valid post-selection inference for outcome-adaptive covariate selection and estimand-specific theory of optimal adjustment sets. A second strand asks what repeated interviewing changes in survey answers, what can and cannot be identified about it from a panel's own design, and what an analyst should believe when it cannot be identified.</p>
+<p>Substantively I use Japan's long-running panel surveys and administrative data to study inequality over the life course: care work and long-term care policy, including households that combine childcare with elder care; why Japan's gender gaps in pay, careers, and workplace authority have proved so immobile; what staying put does in a society where most adults never move, using residential histories linked to small-area geographic data; how employment careers and family formation are jointly produced; and a programme of natural-experiment studies of Japanese social policy built around administrative data that covers every municipality.</p>
+<p>I am a member of the Japanese Life Course Panel Surveys (JLPS) team at the Institute of Social Science, The University of Tokyo, where I was on the faculty from 2018 to 2025. I hold a PhD in Human Sciences from Osaka University (2017).</p>
+
+<p class="meta"><a href="https://orcid.org/0009-0007-6925-5174">ORCID 0009-0007-6925-5174</a> · Research interests: causal inference · sociological methodology · survey methodology and measurement error · panel data · social stratification and the life course · gender inequality · residential mobility and neighbourhood effects · social policy and natural experiments.</p>
 
 <h2>Selected work</h2>
 <ul class="plain">
+<li><span class="pub"><span class="t">Identification assumptions and strategies for panel conditioning bias based on the potential outcomes model: a natural experiment with additional random sampling</span> (in Japanese). <span class="j">Advances in Social Research</span>, 33, 2024.</span></li>
 <li><span class="pub"><span class="t">Applications of machine learning in sociology</span> (in Japanese). <span class="j">Advances in Social Research</span>, 31, 2023.</span></li>
 <li><span class="pub"><span class="t">Introduction to statistical causal inference: association meets causation</span> (in Japanese). <span class="j">Sociological Theory and Methods</span>, 38(1), 2023. <a href="https://doi.org/10.11218/ojjams.38.169">doi</a></span></li>
-<li><span class="pub">Bai, H. &amp; Clark, M. H., <span class="t">Propensity Score Methods and Applications</span> — Japanese translation with H. Kurokawa. Kyoritsu Shuppan, 2023.</span></li>
-<li><span class="pub"><span class="t">Wage stratification between care workers and non-care workers in Japan: evidence from 2001–2017</span> (with K. Kawata, T. Yin, Z. Xu). RIETI Discussion Paper 19-E-081, 2019.</span></li>
+<li><span class="pub">Bai, H. &amp; Clark, M. H., <span class="t">Propensity Score Methods and Applications</span> &mdash; Japanese translation with H. Kurokawa. Kyoritsu Shuppan, 2023.</span></li>
 </ul>
-<p><a href="publications.html">All publications →</a></p>
+<p><a href="publications.html">All publications &rarr;</a></p>
 
 <h2>News</h2>
 <ul class="plain news">
-<li><span class="year">2026</span><span>Principal investigator, JSPS KAKENHI Grant-in-Aid for Scientific Research (C) 26K05332, <em>A large-scale analysis of dual caregiving across childcare and elder care</em> (FY2026–2029).</span></li>
+<li><span class="year">2026</span><span><a href="https://github.com/sokubo/dagmv">dagmv</a> 0.1.0, an R package for causally disciplined multiverse analysis, released on GitHub.</span></li>
+<li><span class="year">2026</span><span>Principal investigator, JSPS KAKENHI Grant-in-Aid for Scientific Research (C) 26K05332, <em>A large-scale analysis of dual caregiving across childcare and elder care</em> (FY2026&ndash;2029).</span></li>
 <li><span class="year">2025</span><span>Received the 15th <em>Advances in Social Research</em> Award (Japanese Association for Social Research).</span></li>
 <li><span class="year">2025</span><span>Joined the Faculty of Sociology, Toyo University, as Assistant Professor.</span></li>
 <li><span class="year">2023</span><span>Japanese translation of <em>Propensity Score Methods and Applications</em> published by Kyoritsu Shuppan.</span></li>
@@ -42,7 +63,7 @@
 
 </main>
 <footer class="site">
-<div class="links"><a href="https://researchmap.jp/sokubo?lang=en">researchmap</a><a href="https://scholar.google.com/citations?user=Fmei__QAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/sokubo">GitHub</a><a href="https://nrid.nii.ac.jp/en/nrid/1000090807835/">KAKEN</a></div>
+<div class="links"><a href="https://orcid.org/0009-0007-6925-5174">ORCID</a><a href="https://researchmap.jp/sokubo?lang=en">researchmap</a><a href="https://scholar.google.com/citations?user=Fmei__QAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/sokubo">GitHub</a><a href="https://nrid.nii.ac.jp/en/nrid/1000090807835/">KAKEN</a></div>
 <p>Faculty of Sociology, Toyo University · <a href="mailto:okubo080@toyo.jp">okubo080@toyo.jp</a><br>Last updated September 2026.</p>
 </footer>
 </body>

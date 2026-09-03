@@ -26,3 +26,16 @@ footer.site{max-width:var(--max);margin:0 auto;padding:1.5rem 1.25rem 3rem;borde
 footer.site a{color:var(--muted)}
 .links a{margin-right:1rem;white-space:nowrap}
 @media print{nav.site,footer.site .links{display:none}body{background:#fff}}
+
+/* theorem plate */
+.plate{margin:1.8rem 0 1.4rem;padding:1.5rem 1.6rem 1rem;background:#1e2d3d;color:#f3eee3;border-radius:4px;box-shadow:0 1px 0 rgba(0,0,0,.15)}
+.plate figcaption{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#c8b48c;margin:0 0 1rem}
+.plate .item{padding:.9rem 0;border-top:1px solid rgba(243,238,227,.14)}
+.plate .cap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:.8rem;color:#e8dfcc;margin:0 0 .4rem}
+.plate .eq{overflow-x:auto;padding:.2rem 0;font-size:.98rem}
+.plate .eq .katex-display{margin:.4rem 0}
+.plate .note{font-size:.9rem;line-height:1.55;color:#d9d2c3;margin:.3rem 0 0}
+.plate .note em{color:#fff}
+.plate .fine{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:.72rem;color:#a89f8e;margin:1rem 0 0}
+.plate .katex{color:#f8f4ea}
+@media(max-width:600px){.plate{padding:1.1rem 1rem .8rem}.plate .eq{font-size:.9rem}}

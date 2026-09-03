@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Software — Shoki Okubo</title>
-<meta name="description" content="Shoki Okubo — Assistant Professor of Sociology, Toyo University. Causal inference, model uncertainty, panel data.">
+<meta name="description" content="Shoki Okubo — Assistant Professor of Sociology, Toyo University. Causal inference, model uncertainty, survey measurement, and inequality over the life course in Japan.">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:,">
 </head>
@@ -13,15 +13,17 @@
 <main>
 
 <h1>Software</h1>
-<h2>dagmv <span class="tag">R · in development</span></h2>
+<h2>dagmv <span class="tag">R · 0.1.0</span></h2>
 <p>Causally disciplined multiverse analysis. A dependency-free core parses candidate DAGs (dagitty-compatible syntax), tests d-separation, applies the generalized adjustment criterion, and classifies every candidate control as required, forbidden, or optional under each candidate graph. <code>mv_run()</code> fits each specification once and maps validity per graph; <code>mv_decompose()</code> returns per-graph robustness metrics and the within/between-graph variance decomposition with its structural share. Engines: linear models, negative binomial, fixed-effects panels.</p>
-<p><!-- TODO: replace with the repository URL once public --><a href="https://github.com/sokubo/dagmv">github.com/sokubo/dagmv</a></p>
+<p><a href="https://github.com/sokubo/dagmv">github.com/sokubo/dagmv</a> &mdash; install with <code>remotes::install_github("sokubo/dagmv")</code>. Bug reports and feature requests are welcome on the issue tracker.</p>
+<h2>In preparation</h2>
+<p>An R package implementing refreshment-sample designs for panel conditioning &mdash; survival matching, its symmetric variant, the entry-wave correction, the decomposition of the naive contrast, and the diagnostic tests that distinguish state-dependent from non-stationary attrition &mdash; with a simulation engine for design planning.</p>
 <h2>Replication archives</h2>
-<p>Code and public data for published and forthcoming papers are released on <a href="https://github.com/sokubo">GitHub</a> as each paper is posted.</p>
+<p>Code and public data for each paper are released on <a href="https://github.com/sokubo">GitHub</a> when the paper is posted as a preprint. Analyses of licensed microdata (the Japanese Life Course Panel Surveys, government statistics) are released as code together with synthetic data that reproduces the variable structure but not the values.</p>
 
 </main>
 <footer class="site">
-<div class="links"><a href="https://researchmap.jp/sokubo?lang=en">researchmap</a><a href="https://scholar.google.com/citations?user=Fmei__QAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/sokubo">GitHub</a><a href="https://nrid.nii.ac.jp/en/nrid/1000090807835/">KAKEN</a></div>
+<div class="links"><a href="https://orcid.org/0009-0007-6925-5174">ORCID</a><a href="https://researchmap.jp/sokubo?lang=en">researchmap</a><a href="https://scholar.google.com/citations?user=Fmei__QAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/sokubo">GitHub</a><a href="https://nrid.nii.ac.jp/en/nrid/1000090807835/">KAKEN</a></div>
 <p>Faculty of Sociology, Toyo University · <a href="mailto:okubo080@toyo.jp">okubo080@toyo.jp</a><br>Last updated September 2026.</p>
 </footer>
 </body>
