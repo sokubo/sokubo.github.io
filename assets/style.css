@@ -1,5 +1,5 @@
 
-:root{--bg:#fbfaf7;--ink:#1c1b18;--muted:#6b6862;--rule:#e4e1d8;--accent:#1f4e79;--accent-2:#8a5a2b;--max:46rem}
+:root{--bg:#fff;--ink:#1c1b18;--muted:#6b6862;--rule:#e5e4e1;--accent:#1f4e79;--accent-2:#8a5a2b;--max:46rem}
 *{box-sizing:border-box}html{font-size:17px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;line-height:1.62}
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(31,78,121,.25)}a:hover{border-bottom-color:var(--accent)}
