@@ -21,8 +21,8 @@
 <figcaption>Three identities from current work</figcaption>
 <div class="item">
 <div class="cap">Where a multiverse's disagreement comes from</div>
-<div class="eq">\[ \operatorname{Var}(\hat\tau)=\underbrace{\textstyle\sum_{g} w_g\,\operatorname{Var}(\hat\tau \mid G_g)}_{\text{within graphs: sampling + specification}}\;+\;\underbrace{\operatorname{Var}_g\,E[\hat\tau \mid G_g]}_{\text{between graphs: structural}} \]</div>
-<div class="note">Restrict a multiverse to the specifications each candidate causal graph licenses. The structural share \(\rho=\text{between}/\text{total}\) says how much of the spread is a disagreement about the world rather than about the model.</div>
+<div class="eq">\[ \operatorname{Var}(\hat\tau)=\underbrace{\textstyle\sum_{g} w_g\,\operatorname{Var}(\hat\tau \mid G_g)}_{\text{within graphs}}\;+\;\underbrace{\operatorname{Var}_g\,E[\hat\tau \mid G_g]}_{\text{between graphs}} \]</div>
+<div class="note">Restrict a multiverse to the specifications each candidate causal graph licenses. The between-graph share \(\rho=\text{between}/\text{total}\) says how much of the spread is disagreement between the candidate graphs rather than among the specifications each licenses &mdash; a conditional summary that depends on the candidate set, its weights and a common estimand. Preprint: <a href="https://arxiv.org/abs/2609.16618">arXiv:2609.16618</a>.</div>
 </div>
 <div class="item">
 <div class="cap">When an outcome predictor hurts the effect on the treated</div>
@@ -37,7 +37,7 @@
 <p class="fine">Working papers; full statements, assumptions, and proofs are in the papers.</p>
 </figure>
 
-<p>My methodological work sits between social-science methodology and statistics. Current projects develop <em>causally disciplined multiverse analysis</em> &mdash; running robustness analyses only within specifications that a stated causal model licenses, and decomposing disagreement across specifications into sampling noise and structural uncertainty &mdash; together with valid post-selection inference for outcome-adaptive covariate selection and estimand-specific theory of optimal adjustment sets. A second strand asks what repeated interviewing changes in survey answers, what can and cannot be identified about it from a panel's own design, and what an analyst should believe when it cannot be identified.</p>
+<p>My methodological work sits between social-science methodology and statistics. Current projects develop <em>causally disciplined multiverse analysis</em> &mdash; running robustness analyses only within specifications that a stated causal model licenses, and decomposing the licensed multiverse&rsquo;s dispersion into within-graph and between-graph components &mdash; together with valid post-selection inference for outcome-adaptive covariate selection and estimand-specific theory of optimal adjustment sets. A second strand asks what repeated interviewing changes in survey answers, what can and cannot be identified about it from a panel's own design, and what an analyst should believe when it cannot be identified.</p>
 <p>Substantively I use Japan's long-running panel surveys and administrative data to study inequality over the life course: care work and long-term care policy, including households that combine childcare with elder care; why Japan's gender gaps in pay, careers, and workplace authority have proved so immobile; what staying put does in a society where most adults never move, using residential histories linked to small-area geographic data; how employment careers and family formation are jointly produced; a programme of natural-experiment studies of Japanese social policy built on administrative data that covers every municipality; and the long-run persistence of historical institutions, studied with historical sources I digitize and release myself.</p>
 <p>I am a member of the Japanese Life Course Panel Surveys (JLPS) team at the Institute of Social Science, The University of Tokyo, where I was on the faculty from 2018 to 2025. I hold a PhD in Human Sciences from Osaka University (2017).</p>
 
@@ -54,6 +54,7 @@
 
 <h2>News</h2>
 <ul class="plain news">
+<li><span class="year">2026</span><span><a href="https://arxiv.org/abs/2609.16618">A multiverse of good and bad controls</a>, on candidate causal graphs for interpreting model robustness analysis, posted as a preprint (arXiv:2609.16618), with <a href="https://github.com/sokubo/dagmv">dagmv</a> 0.1.3 and the replication archive.</span></li>
 <li><span class="year">2026</span><span><a href="https://arxiv.org/abs/2609.11222">Optimal covariate adjustment beyond the average treatment effect</a>, on adjustment sets for treated-population and overlap-weighted estimands, posted as a preprint (arXiv:2609.11222).</span></li>
 <li><span class="year">2026</span><span><a href="https://github.com/sokubo/panelcond">panelcond</a> 0.1.1, an R package implementing refreshment-sample designs for panel conditioning, released on GitHub.</span></li>
 <li><span class="year">2026</span><span><a href="https://github.com/sokubo/dagmv">dagmv</a> 0.1.0, an R package for causally disciplined multiverse analysis, released on GitHub.</span></li>
